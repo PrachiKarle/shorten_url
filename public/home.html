@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="height: 100vh; width: 100%; margin: 0; display: flex;
+        justify-content: center;
+        align-items: center;">
+    <div
+      style="
+        padding: 25px;
+        background-color: aqua;
+        margin: 0; border-radius:15px;
+      "
+    >
+      <h1 style="text-align: center">Welcome to URL Shortener</h1>
+    
+
+      <form action="/shorten" method="POST" style="text-align: center;">
+        <input
+          type="text"
+          name="longUrl"
+          placeholder="Enter long URL"
+          style="display: block;width:90%;margin-top: 25px;padding:10px"
+        />
+        <button type="submit" style="margin-top: 25px; background-color:black;color:white;padding:10px;">Shorten</button>
+      </form>
+    </div>
+  </body>
+</html>
