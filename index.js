@@ -6,8 +6,7 @@ const querystring = require("querystring");
 
 //generate random url path
 function generateShortCode(length = 6) {
-  const chars =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   let code = "";
   for (let i = 0; i < length; i++) {
     code += chars.charAt(Math.floor(Math.random() * chars.length));
@@ -15,9 +14,12 @@ function generateShortCode(length = 6) {
   return code;
 }
 
+
+
+
+
 //map that url
 const urlMap = {};
-const session = {};
 const users = {
   Prachi: "prachi@23",
 };
@@ -48,8 +50,6 @@ var server = http.createServer((req, res) => {
     req.on("end", () => {
       const { username, password } = querystring.parse(body);
       if (users[username] && users[username] === password) {
-        const sessionId = generateShortCode(16);
-        session[sessionId] = username;
         res.writeHead(302, { Location: "/customize" });
         res.end();
       } else {
@@ -116,11 +116,7 @@ var server = http.createServer((req, res) => {
           return res.end("Custom code already exists.");
         }
         shortCode = customCode;
-      } else {
-        do {
-          shortCode = generateShortCode();
-        } while (urlMap[shortCode]);
-      }
+      } 
 
       urlMap[shortCode] = longUrl;
 
