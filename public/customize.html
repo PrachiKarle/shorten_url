@@ -25,11 +25,17 @@
     >
       <h1 style="text-align: center">Welcome to URL Shortener</h1>
 
-      <form action="/shorten" method="POST" style="text-align: center">
+      <form action="/custom_shorten" method="POST" style="text-align: center">
         <input
           type="text"
           name="longUrl"
           placeholder="Enter long URL"
+          style="display: block; width: 90%; margin-top: 25px; padding: 10px"
+        />
+        <input
+          type="text"
+          name="shortUrl"
+          placeholder="Enter Short URL Alias"
           style="display: block; width: 90%; margin-top: 25px; padding: 10px"
         />
         <button
@@ -43,16 +49,7 @@
         >
           Shorten
         </button>
-        <a
-          href="./Login.html"
-          style="
-            text-decoration: none;
-            color: white;
-            margin-left: 25px; text-align:center;
-            background-color: black; padding:10px;
-          "
-          >Customize Url</a
-        >
+        
       </form>
     </div>
   </body>
