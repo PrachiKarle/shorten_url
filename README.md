@@ -15,12 +15,20 @@ Features
 Project Structure
 
    shorten_url/
+
      ├── public/
+
      │ ├── home.html
+
      │ ├── customize.html
+
      │ ├── Login.html
+
      ├── index.js
+     
      └── README.md
+
+
 
 
 How to Run
@@ -28,6 +36,7 @@ How to Run
 1. Clone the repository
 
    git clone https://github.com/yourusername/url-shortener.git
+
    cd url-shortener
 
 2. Run the server
